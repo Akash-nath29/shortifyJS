@@ -8,7 +8,7 @@ generateBtn.addEventListener("click", ()=>{
     fetch(`https://api.shrtco.de/v2/shorten?url=${url}/very/long/link.html`)
     .then((res)=>res.json())
     .then((value)=>{
-        urlOutput.value = value.result.short_link;
+        urlOutput.value = `https://${value.result.short_link}`;
     }).catch((error)=>{
         urlOutput.value = "Something Went Wrong";
     })
