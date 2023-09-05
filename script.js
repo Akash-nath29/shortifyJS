@@ -5,7 +5,7 @@ const copyBtn = document.querySelector("#copyBtn");
 
 generateBtn.addEventListener("click", ()=>{
     const url = urlInput.value;
-    fetch(`https://api.shrtco.de/v2/shorten?url=${url}/very/long/link.html`)
+    fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
     .then((res)=>res.json())
     .then((value)=>{
         urlOutput.value = `https://${value.result.short_link}`;
